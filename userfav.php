@@ -42,7 +42,7 @@ $result2 = $sql2->get_result();
             Explore UBC
         </title>
         <h1>
-            <a href="/304project/home.php">Explore UBC</a>
+            <a href="home.php">Explore UBC</a>
         </h1>
     </head>
     <body>
@@ -50,21 +50,21 @@ $result2 = $sql2->get_result();
         <?php 
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
             echo "<h2>" . $_SESSION['username'] . "'s " . 
-            "<nav class='nav justify-content-center'><a class='nav-link active' href='/304project/userfav.php'>Favorites</a>" . 
-            " / " . "<a class='nav-link secondary' href='/304project/userupload.php'>Uploads</a></nav>"; 
+            "<nav class='nav justify-content-center'><a class='nav-link active' href='userfav.php'>Favorites</a>" .
+            " / " . "<a class='nav-link secondary' href='userupload.php'>Uploads</a></nav>";
             echo "<br>";
             if ($result2->num_rows>0) {
                 while($row2 = $result2->fetch_assoc()) {
-                    echo "<a href='/304project/postCollection.php?lid=" . $row2['lid'] . "'>". 
+                    echo "<a href='postCollection.php?lid=" . $row2['lid'] . "'>".
                     $row2["name"] . "</a><br>" . 
-                    "<a href='/304project/post.php?psid=" . $row2['psid'] . "'>
+                    "<a href='post.php?psid=" . $row2['psid'] . "'>
                     <img src=" . $row2['url'] . " style='width:512px;'><br>";
                 }
             } else {
                 echo "Nothing here for now! <br> Add some photos to your favorite list and you will see them here.";
             }
         } else {
-            echo "User logged out, please return to <a href='/304project/home.php'>Homepage</a>";
+            echo "User logged out, please return to <a href='home.php'>Homepage</a>";
         }
         ?>
         </div>

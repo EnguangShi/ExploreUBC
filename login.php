@@ -5,7 +5,7 @@
             Explore UBC
         </title>
         <h1>
-            <a href="/304project/home.php">Explore UBC</a>
+            <a href="home.php">Explore UBC</a>
         </h1>
     </head>
 </html>
@@ -46,10 +46,10 @@ if ($result->num_rows === 1) {
     $pid = $row1["pid"];
     $_SESSION['pid'] = $pid;
     echo "<h2><div class='text-center'>Logged in Successfully!</div></h2>";
-    echo "<br><div class='text-center'><a href='/304project/home.php'>Homepage</a></div>";
+    echo "<br><div class='text-center'><a href='home.php'>Homepage</a></div>";
 } else {
     echo "<h2><div class='text-center'>Invalid Username & Password Pair</div></h2>";
-    echo "<br><div class='text-center'><a href='/304project/login.html'>Retry</a></div>";
+    echo "<br><div class='text-center'><a href='login.html'>Retry</a></div>";
 }
 
 // close database

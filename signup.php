@@ -5,7 +5,7 @@
             Explore UBC
         </title>
         <h1>
-            <a href="/304project/home.html">Explore UBC</a>
+            <a href="home.html">Explore UBC</a>
         </h1>
     </head>
 </html>
@@ -31,7 +31,7 @@ $sql = "INSERT INTO People VALUES(DEFAULT, '$password', '$username');";
 $sql .= "INSERT INTO Users VALUES(DEFAULT);";
 if ($conn->multi_query($sql) === TRUE) {
     echo "<h2><div class='text-center'>Account Created Successfully!</div></h2>";
-    echo "<br><div class='text-center'><a href='/304project/login.html'>Log in Now</a></div>";
+    echo "<br><div class='text-center'><a href='login.html'>Log in Now</a></div>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
